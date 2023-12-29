@@ -33,11 +33,14 @@ class ImageAdapter(private val imageList: ArrayList<model>) :
     }
     class ImageViewHolder(itemView:View) : RecyclerView.ViewHolder(itemView) {
         val image:ImageView = itemView.findViewById(R.id.image_row)
-//        val heading: TextView =itemView.findViewById(R.id.headding_event01)
-//        val loctimeDetails: TextView =itemView.findViewById(R.id.tv_loctimedetails)
-        // loctimeDetails is for the recylerview use only
+
+
+
+
         //importing all the ids of the itemrow XML as that XML is an example of how each element
         // in the recyclerview should be
     }
     //can also use binding in the above block
 }
+// when the recylerview is clicked the adapter is not able to perform somehow so the easy fix would be to just populate the
+//recylcer view manually and see what happens

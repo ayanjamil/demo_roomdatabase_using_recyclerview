@@ -3,16 +3,16 @@ package com.example.demo_roomdb_and_recyclerview
 import android.os.Parcel
 import android.os.Parcelable
 
-data class model(var eventImage:Int, var id:Int):Parcelable {
+data class model(var eventImage:Int, var id:String):Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readInt(),
-        parcel.readInt()
+        parcel.readString()!!
     ) {
     }
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeInt(eventImage)
-        parcel.writeInt(id)
+        parcel.writeString(id)
     }
 
     override fun describeContents(): Int {
