@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.example.demo_roomdb_and_recyclerview"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.demo_roomdb_and_recyclerview"
@@ -32,6 +32,9 @@ android {
     }
     kotlinOptions {
         jvmTarget = "1.8"
+    }
+    buildFeatures {
+        viewBinding=true
     }
 }
 
