@@ -25,18 +25,21 @@ class MainActivity : AppCompatActivity() {
         ImageAdapter = ImageAdapter(imageList)
         // adapter instance is set to the recyclerview to inflate the items.
         binding?.rvList?.adapter = ImageAdapter
+        clickedimageList= ArrayList()
         // and here the adapter setting ends
         ImageAdapter.onItemClick={
 
             intent.putExtra("Image",it)
             clickedimageList.add(it)
-            var new :model = clickedimageList[clickedimageList.lastIndex]
-            Log.d("click",new.id.toString())
+//            var new :model = clickedimageList[clickedimageList.lastIndex]
+            Log.d("clicked",clickedimageList.toString())
         }
+
 
         binding?.btnHistory?.setOnClickListener {
             val intent = Intent(this, clickHistory::class.java)
             startActivity(intent)
+            Log.d("final_clicked_list",clickedimageList.toString())
         }
 
     }
@@ -49,7 +52,7 @@ class MainActivity : AppCompatActivity() {
         //        this is how to add manually
 
         imageList= ArrayList()
-        clickedimageList= ArrayList()
+
         imageList.add(
             model(
                 R.drawable.image01,"01"
