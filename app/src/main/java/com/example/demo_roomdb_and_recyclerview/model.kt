@@ -9,7 +9,7 @@ data class model(var eventImage:Int, var id:String):Parcelable {
         parcel.readString()!!
     ) {
     }
-
+// adding the parcelalbleity feature
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeInt(eventImage)
         parcel.writeString(id)
