@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.demo_roomdb_and_recyclerview.databinding.ActivityMainBinding
-
 class MainActivity : AppCompatActivity() {
     private lateinit var imageList:ArrayList<model>
     private lateinit var clickedimageList:ArrayList<model>
