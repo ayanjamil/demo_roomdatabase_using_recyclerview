@@ -8,7 +8,7 @@ import kotlinx.coroutines.flow.Flow
 @Dao
 interface idDao {
     @Insert
-    suspend fun insert(idEntity: idEntity)
+    suspend fun insert(IdEntity: idEntity)
 
     @Query("Select * from idEntity")
     fun fetchALlDates(): Flow<List<idEntity>>

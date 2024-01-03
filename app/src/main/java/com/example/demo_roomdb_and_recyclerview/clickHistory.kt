@@ -1,6 +1,7 @@
 package com.example.demo_roomdb_and_recyclerview
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -20,13 +21,13 @@ class clickHistory : AppCompatActivity() {
 //        imageList = intent.getParcelableArrayListExtra<model>("clickedImageList") ?: arrayListOf()
         // importing passed out value of clickedImageList from amin and storing it in local variable imagelist
 
-//        val dao = (application as demoApp).db.idDao()
-//        getAllCompletedDates(dao)
+        val dao = (application as DemoApp).db.idDao()
+        getAllCompletedDates(dao)
 
-
-        binding?.rvidhistory?.layoutManager = LinearLayoutManager(this)
-        historyAdapter = historyAdapter(list)
-        binding?.rvidhistory?.adapter = historyAdapter
+//
+//        binding?.rvidhistory?.layoutManager = LinearLayoutManager(this)
+//        historyAdapter = historyAdapter(list)
+//        binding?.rvidhistory?.adapter = historyAdapter
     }
 
     private fun getAllCompletedDates(idDao: idDao) {
@@ -50,11 +51,9 @@ class clickHistory : AppCompatActivity() {
                     // Access the RecyclerView Adapter and load the data into it
                     binding?.rvidhistory?.adapter = historyAdapter
                 }
-//                else {
-//                    binding?.tvHistory?.visibility = View.GONE
-//                    binding?.rvHistory?.visibility = View.GONE
-//                    binding?.tvNoDataAvailable?.visibility = View.VISIBLE
-//                }
+                else {
+                    Log.d("history_empty","History empty")
+                }
                 // END
             }
         }
