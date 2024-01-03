@@ -41,7 +41,7 @@ android {
 
 dependencies {
 //prev_proj
-    val room_version = "2.5.0"
+    val room_version = "2.6.1"
     val activityVersion = "1.3.1"
     val lifecycle_version = "2.4.0-beta01"
     // Room and Lifecycle dependencies
