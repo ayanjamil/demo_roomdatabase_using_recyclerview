@@ -7,3 +7,7 @@ import androidx.room.PrimaryKey
 data class idEntity(
     @PrimaryKey
     val id :String)
+//to fix
+// problem is that when the same image is clicked the next time it crasehse
+// solution is to clear the cashe and then click to see history
+// so i have to make every click somehow uniques
